@@ -13,7 +13,7 @@
         />
         <q-separator class="large-screen-only" vertical spaced />
         <q-toolbar-title class="text-grand-hotel text-bold">
-          Quasagram
+          Possimpible
         </q-toolbar-title>
         <q-btn
           to="/"
