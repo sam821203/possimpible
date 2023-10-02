@@ -10,11 +10,11 @@
       <canvas
         ref="canvasDom"
         class="full-width"
-        height="240"
+        height="200"
         v-show="imageCaptured"
       />
     </div>
-    <div class="text-center q-pa-md">
+    <div class="text-center q-pa-lg">
       <q-btn
         round
         color="grey-10"
@@ -24,28 +24,25 @@
         @click="captureImage"
       />
       <!-- v-if="hasCameraSupport" -->
+      <div class="q-ma-md">OR</div>
       <q-file
         outlined
         v-model="imageUpload"
         label="Choose an image"
         accept="image/*"
+        class="q-mb-xl"
         @update:model-value="captureImageFallBack"
       >
         <template #prepend>
           <q-icon name="eva-attach-outline" />
         </template>
       </q-file>
-      <div class="row justify-center q-ma-md">
-        <q-input
-          class="col col-sm-6"
-          v-model="post.caption"
-          label="Caption *"
-          dense
-        />
+      <div class="full-width row justify-center q-ma-md">
+        <q-input class="col" v-model="post.caption" label="Caption *" dense />
       </div>
-      <div class="row justify-center q-ma-md">
+      <div class="full-width row justify-center q-ma-md">
         <q-input
-          class="col col-sm-6"
+          class="col q-mb-lg"
           v-model="post.location"
           label="Location"
           :loading="locationLoading"
@@ -63,12 +60,13 @@
           </template>
         </q-input>
       </div>
-      <div class="row justify-center q-mt-lg">
+      <div class="row justify-center q-my-lg">
         <q-btn
           unelevated
           rounded
           color="primary"
           label="Post Image"
+          class="full-width q-py-md"
           :disable="!post.photo || !post.caption"
           @click="addPost()"
         />

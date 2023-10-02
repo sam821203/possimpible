@@ -44,7 +44,7 @@
                   font-size="16px"
                 />
               </template>
-              <b>Install Quasagram ?</b>
+              <b>Install Possimpible ?</b>
               <template v-slot:action>
                 <q-btn
                   flat
